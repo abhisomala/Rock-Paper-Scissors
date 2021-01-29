@@ -6,46 +6,46 @@ affirmative_answers = ["yes", "yeah", "sure", "yup", "okay", "of course", "alrig
 negative_answers = ["naw", "never", "absolutly not""no", "nope", "nah","not a chance", "sorry", "never", "no way"] 
 
 def win():
-    print('You win!')
+    print('\nYou win!')
 
 def lost():
-    print('You lost.')
+    print('\nYou lost.')
 
 def draw():
-    print('Its a draw!')
+    print('\nIts a draw!')
 
-ans = input("Hi, welcome to Rock, Paper, Scissors. Do you want to play? ")
+ans = input("\nHi, welcome to Rock, Paper, Scissors. Do you want to play? ")
 if ans in affirmative_answers:
-  print("Lets Play!")
+  print("\nLets Play!")
 
 else:
-  ans = input("Are you sure? ")
+  ans = input("\nAre you sure? ")
 
   if ans in affirmative_answers:
-    print("I knew you would change your mind! Lets play!")
+    print("\nI knew you would change your mind! Lets play!")
   else:
-    print("Good Bye")
+    print("\nGood Bye")
 
 
 def the_game():
 
     moves = ['rock', 'paper', 'scissors']
 
-    print(' Rock, Paper, Scissors?')
+    print(' \nRock, Paper, Scissors?')
     attempts = 3
     while True:
         if attempts == 0:
-            print('You failed to provide a correct option to play the game.')
+            print('\nYou failed to provide a correct option to play the game.')
             time.sleep(3)
             sys.exit(0)
 
         player = str(input('Player: ')).lower()
         if player.lower() not in moves:
-            print(f' You entered an invalid option! You have {attempts} attempts left.')
+            print(f' \nYou entered an invalid option! You have {attempts} attempts left.')
             attempts -= 1
         else:
             computer = random.choice(moves)
-            print(f'Computer: {computer}')
+            print(f'\nComputer: {computer}')
 
             if player == computer:
                 draw()
@@ -64,15 +64,15 @@ def the_game():
             else:
                 pass
 
-            play_again = str(input('Do you want to play again? (y/n): '))
+            play_again = str(input('\nDo you want to play again? (y/n): '))
             if play_again.lower() == 'y':
                 the_game()
             elif play_again.lower() == 'n':
-                print('Goodbye.')
+                print('\nGoodbye.')
                 time.sleep(2.5)
                 sys.exit(0)
             else:
-                print('You entered an invalid option. Goodbye.')
+                print('\nYou entered an invalid option. Goodbye.')
                 time.sleep(2.5)
                 sys.exit(0)
 
