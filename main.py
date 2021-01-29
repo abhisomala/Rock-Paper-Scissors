@@ -2,6 +2,8 @@ import time
 import sys
 import random
 
+affirmative_answers = ["yes", "yeah", "sure", "yup", "okay", "of course", "alright", "certainly", "absolutely", "by all means", "yup", "ok", "okie", "yea", "why not", "lets begin"]
+negative_answers = ["naw", "never", "absolutly not""no", "nope", "nah","not a chance", "sorry", "never", "no way"] 
 
 def win():
     print('You win!')
@@ -11,6 +13,18 @@ def lost():
 
 def draw():
     print('Its a draw!')
+
+ans = input("Hi, welcome to Rock, Paper, Scissors. Do you want to play? ")
+if ans in affirmative_answers:
+  print("Lets Play!")
+
+else:
+  ans = input("Are you sure? ")
+
+  if ans in affirmative_answers:
+    print("I knew you would change your mind! Lets play!")
+  else:
+    print("Good Bye")
 
 
 def the_game():
